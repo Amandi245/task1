@@ -13,7 +13,7 @@ const AboutSection = () => {
 
       <div className="max-w-7xl mx-auto px-10">
 
-        <h2 className="text-7xl font-bold leading-tight">
+        <h2 className="text-7xl font-bold  leading-tight">
           We build <em className="italic font-normal">experiences</em>
           <br />
           that people remember
@@ -28,11 +28,11 @@ const AboutSection = () => {
           is built to spark connection, foster engagement, and
           leave a meaningful, lasting impact.
         </p>
-        <div className="overflow-hidden mt-20">
+      </div>
+     <div className="overflow-hidden mt-20">
+      <div className="flex w-max animate-marquee gap-4">
 
-  <div className="flex w-max animate-marquee gap-4">
-
-    {[...images, ...images].map((image, index) => (
+        {[...images, ...images].map((image, index) => (
 
       <Image
         key={index}
@@ -49,7 +49,7 @@ const AboutSection = () => {
 
 </div>
 
-      </div>
+    
 
     </section>
   );

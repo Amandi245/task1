@@ -41,3 +41,18 @@ body {
   animation:marquee 20s linear infinite;
 
 }
+@keyframes servicesMarquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-services-marquee {
+  display: flex;
+  width: max-content;
+  flex-wrap: nowrap;
+  animation: servicesMarquee 20s linear infinite;
+}
