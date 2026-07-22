@@ -57,7 +57,7 @@ const Services = () => {
           {[1, 2].map((item) => (
             <Image
               key={item}
-              src="/images/frame-services.svg"
+              src="/images/temp.svg"
               alt="Services Marquee"
               width={1600}
               height={120}
