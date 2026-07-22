@@ -57,7 +57,7 @@ const Services = () => {
           {[1, 2].map((item) => (
             <Image
               key={item}
-              src="/images/temp.svg"
+              src="/images/frame-services.svg"
               alt="Services Marquee"
               width={1600}
               height={120}
@@ -75,7 +75,6 @@ const Services = () => {
             className="group border-b border-gray-300 transition-all duration-300 hover:bg-[#F5F360] cursor-pointer"
           >
             <div className="flex items-center justify-between px-10 py-7">
-              
               <h3 className="text-[52px] font-light transition-all duration-300 group-hover:text-[28px]">
                 {service.title}
               </h3>
