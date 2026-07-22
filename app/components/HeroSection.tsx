@@ -33,7 +33,7 @@ const HeroSection = () => {
         >
           Elevate
         </h1>
-        <p className="mt-3 text-5xl font-normal text-white">
+        <p className="mt-2 text-5xl font-normal text-white">
           Ideas{" "}
           <span className=" mx-3 text-base text-[#F5F360] font-normal align-middle">
             into
