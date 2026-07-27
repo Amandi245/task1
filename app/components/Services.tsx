@@ -1,5 +1,5 @@
 import { Cormorant_Garamond } from "next/font/google";
-import Image from "next/image";
+import Image from "next/image";  
 
 const cormorant = Cormorant_Garamond({
   subsets: ["latin"],

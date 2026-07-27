@@ -72,3 +72,29 @@ body {
   flex-wrap: nowrap;
   animation: servicesMarquee 20s linear infinite;
 }
+
+@keyframes servicesMarquee {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes workMarquee {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-work-marquee {
+  display: flex;
+  width: max-content;
+  animation: workMarquee 20s linear infinite;
+}
