@@ -1,4 +1,11 @@
 import Image from "next/image";
+import Marquee from "react-fast-marquee";
+import { DM_Sans } from "next/font/google";
+
+const dmSans = DM_Sans({
+  subsets: ["latin"],
+  weight: ["500"],
+});
 
 const works = [
   {
@@ -32,65 +39,92 @@ const works = [
 const WorkSection = () => {
   return (
     <section className="bg-white pb-20 overflow-hidden">
-      
       <div className="overflow-hidden border-b border-gray-300">
-        <div className="animate-work-marquee flex w-max">
-          {[1, 2].map((item) => (
-            <Image
-              key={item}
-              src="/images/frame-work.svg"
-              alt="Work Marquee"
-              width={1600}
-              height={120}
-              className="h-24 w-auto flex-shrink-0"
-              priority
-            />
-          ))}
-        </div>
+        <Marquee speed={70} gradient={false}>
+          <Image
+            src="/images/frame-work.svg"
+            alt="Work Marquee"
+            width={1600}
+            height={120}
+            className="h-24 w-auto mr-8"
+            priority
+          />
+
+          <Image
+            src="/images/frame-work.svg"
+            alt="Work Marquee"
+            width={1600}
+            height={120}
+            className="h-24 w-auto mr-8"
+            priority
+          />
+        </Marquee>
       </div>
 
       <div className="max-w-7xl mx-auto px-10 py-10">
-       
-        <div className="grid grid-cols-2 gap-4">
-          {works.slice(0, 2).map((work, index) => (
-            <div key={index} className="relative group overflow-hidden">
-              <Image
-                src={work.image}
-                alt={work.title}
-                width={600}
-                height={400}
-                className="w-full h-[280px] object-cover"
-              />
+        <div className="flex gap-2 mb-2">
+          <div className="w-3/5 relative overflow-hidden group">
+            <Image
+              src={works[0].image}
+              alt={works[0].title}
+              width={800}
+              height={400}
+              className="w-full h-[300px] object-cover "
+            />
 
-              <div className="absolute inset-0 bg-black/25"></div>
+            <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
 
-              <div className="absolute bottom-4 left-4 right-4 flex justify-between items-end text-white">
-                <h3 className="font-semibold leading-tight max-w-[180px]">
-                  {work.title}
-                </h3>
+            <div className="absolute bottom-5 left-5 right-5 flex justify-between items-end text-white">
+              <h3 className={`${dmSans.className} font-semibold text-yellow-300 max-w-[180px]`}>
+                {works[0].title}
+              </h3>
 
-                <p className="text-xs text-right max-w-[180px]">
-                  {work.description}
-                </p>
-              </div>
+              <p className="text-xs text-right max-w-[180px]">
+                {works[0].description}
+              </p>
             </div>
-          ))}
+          </div>
+
+          <div className="w-2/5 relative overflow-hidden group">
+            <Image
+              src={works[1].image}
+              alt={works[1].title}
+              width={600}
+              height={400}
+              className="w-full h-[300px] object-cover "
+            />
+
+            <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
+
+            <div className="absolute bottom-5 left-5 right-5 flex justify-between items-end text-white">
+              <h3
+                className={`${dmSans.className} font-semibold text-yellow-300 max-w-[180px]`}
+              >
+                {works[1].title}
+              </h3>
+
+              <p className="text-xs text-right max-w-[180px]">
+                {works[1].description}
+              </p>
+            </div>
+          </div>
         </div>
 
-      
-        <div className="relative overflow-hidden">
+        <div className="relative overflow-hidden group mb-2">
           <Image
             src={works[2].image}
             alt={works[2].title}
             width={1200}
             height={650}
-            className="w-full h-[450px] object-cover transition-transform duration-500 group-hover:scale-110"
+            className="w-full h-[450px] object-cover"
           />
 
-          <div className="absolute inset-0 bg-black/25"></div>
+          <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
 
-          <div className="absolute bottom-4 left-4 right-4 flex justify-between items-end text-white">
-            <h3 className="font-semibold leading-tight max-w-[220px]">
+          <div className="absolute bottom-5 left-5 right-5 flex justify-between items-end text-white">
+            <h3
+              className={`${dmSans.className} font-semibold text-yellow-300 max-w-[180px]`}
+            >
               {works[2].title}
             </h3>
 
@@ -100,36 +134,57 @@ const WorkSection = () => {
           </div>
         </div>
 
-     
-        <div className="grid grid-cols-2 gap-4 mt-4">
-          {works.slice(3, 5).map((work, index) => (
-            <div key={index} className="relative overflow-hidden">
-              <Image
-                src={work.image}
-                alt={work.title}
-                width={600}
-                height={400}
-                className="w-full h-[280px] object-cover"
-              />
+        <div className="flex gap-2">
+          <div className="w-2/5 relative overflow-hidden group">
+            <Image
+              src={works[3].image}
+              alt={works[3].title}
+              width={600}
+              height={400}
+              className="w-full h-[300px] object-cover "
+            />
 
-              <div className="absolute inset-0 bg-black/25"></div>
+            <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
 
-              <div className="absolute bottom-4 left-4 right-4 flex justify-between items-end text-white">
-                <h3 className="font-semibold leading-tight max-w-[180px]">
-                  {work.title}
-                </h3>
-
-                <p className="text-xs text-right max-w-[180px]">
-                  {work.description}
-                </p>
-              </div>
+            <div className="absolute bottom-5 left-5 right-5 flex justify-between items-end text-white">
+              <h3
+                className={`${dmSans.className} font-semibold text-yellow-300 max-w-[180px]`}
+              >
+                {works[3].title}
+              </h3>
+              <p className="text-xs text-right max-w-[180px]">
+                {works[3].description}
+              </p>
             </div>
-          ))}
+          </div>
+
+          <div className="w-3/5 relative overflow-hidden group">
+            <Image
+              src={works[4].image}
+              alt={works[4].title}
+              width={800}
+              height={400}
+              className="w-full h-[300px] object-cover"
+            />
+
+            <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
+
+            <div className="absolute bottom-5 left-5 right-5 flex justify-between items-end text-white">
+              <h3
+                className={`${dmSans.className} font-semibold text-yellow-300 max-w-[180px]`}
+              >
+                {works[4].title}
+              </h3>
+
+              <p className="text-xs text-right max-w-[180px]">
+                {works[4].description}
+              </p>
+            </div>
+          </div>
         </div>
 
-       
         <div className="flex justify-center mt-10">
-          <button className="bg-[#F5F360] hover:bg-yellow-300 transition px-10 py-3 rounded-md font-medium">
+          <button className="bg-[#F5F360] hover:bg-yellow-300 transition duration-300 px-10 py-3 rounded-md font-medium">
             View All
           </button>
         </div>
