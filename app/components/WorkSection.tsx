@@ -44,15 +44,13 @@ const works = [
 const WorkSection = () => {
   return (
     <section className="bg-white pb-20 overflow-hidden">
-      
-      <div className="overflow-hidden border-b border-gray-300 py-3">
+      <div className="overflow-hidden pt-0 pb-1">
         <Marquee speed={70} gradient={false}>
           {[1, 2, 3, 4].map((item) => (
             <div
               key={item}
               className="flex items-center whitespace-nowrap mr-24"
             >
-            
               <Image
                 src="/images/flower.svg"
                 alt="Flower"
@@ -61,14 +59,12 @@ const WorkSection = () => {
                 className="mr-10"
               />
 
-              
               <span
                 className={`${cormorant.className} text-[128px] font-bold uppercase text-[#D5D5D5] leading-none`}
               >
                 WORK
               </span>
 
-            
               <Image
                 src="/images/star.svg"
                 alt="Star"
@@ -77,7 +73,6 @@ const WorkSection = () => {
                 className="mx-10"
               />
 
-            
               <span
                 className={`${cormorant.className} text-[128px] font-bold uppercase text-[#D5D5D5] leading-none`}
               >
@@ -88,10 +83,9 @@ const WorkSection = () => {
         </Marquee>
       </div>
 
-      <div className="max-w-7xl mx-auto px-10 py-10">
-       
+      <div className="max-w-7xl mx-auto px-10 py-5">
         <div className="flex gap-2 mb-2">
-          <div className="w-3/5 relative overflow-hidden">
+          <div className="w-3/5 relative overflow-hidden rounded">
             <Image
               src={works[0].image}
               alt={works[0].title}
@@ -117,7 +111,7 @@ const WorkSection = () => {
             </div>
           </div>
 
-          <div className="w-2/5 relative overflow-hidden">
+          <div className="w-2/5 relative overflow-hidden rounded">
             <Image
               src={works[1].image}
               alt={works[1].title}
@@ -144,8 +138,7 @@ const WorkSection = () => {
           </div>
         </div>
 
-        
-        <div className="relative overflow-hidden mb-2">
+        <div className="relative overflow-hidden mb-2 rounded">
           <Image
             src={works[2].image}
             alt={works[2].title}
@@ -171,9 +164,8 @@ const WorkSection = () => {
           </div>
         </div>
 
-     
         <div className="flex gap-2">
-          <div className="w-2/5 relative overflow-hidden">
+          <div className="w-2/5 relative overflow-hidden rounded">
             <Image
               src={works[3].image}
               alt={works[3].title}
@@ -199,7 +191,7 @@ const WorkSection = () => {
             </div>
           </div>
 
-          <div className="w-3/5 relative overflow-hidden">
+          <div className="w-3/5 relative overflow-hidden rounded">
             <Image
               src={works[4].image}
               alt={works[4].title}
@@ -226,9 +218,8 @@ const WorkSection = () => {
           </div>
         </div>
 
-        
         <div className="flex justify-center mt-10">
-          <button className="bg-[#F5F360] hover:bg-yellow-300 transition duration-300 px-10 py-3 rounded-md font-medium">
+          <button className="bg-[#F5F360] hover:bg-yellow-300 transition duration-300 px-10 py-3 rounded-md font-medium text-black">
             View All
           </button>
         </div>

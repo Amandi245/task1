@@ -75,14 +75,14 @@ const Services = () => {
                 className="mr-10"
               />
 
-              {/* SERVICES */}
+              
               <span
                 className={`${cormorant.className} text-[128px] font-bold uppercase text-[#D5D5D5] leading-none`}
               >
                 SERVICES
               </span>
 
-              {/* Star */}
+              
               <Image
                 src="/images/star.svg"
                 alt="Star"
@@ -91,7 +91,7 @@ const Services = () => {
                 className="ml-10 mr-10"
               />
 
-              {/* SERVICES */}
+              
               <span
                 className={`${cormorant.className} text-[128px] font-bold uppercase text-[#D5D5D5] leading-none`}
               >
@@ -102,22 +102,21 @@ const Services = () => {
         </Marquee>
       </div>
 
-      {/* Services List */}
       <div className="w-full">
         {services.map((service, index) => (
           <div
             key={index}
             className="group w-full border-b border-gray-300 hover:bg-[#F5F360] transition-all duration-300 cursor-pointer"
           >
-            <div className="mx-auto flex max-w-7xl items-start justify-between px-10 py-7">
-              {/* Title */}
+            <div className="mx-auto flex max-w-7xl items-start justify-between px-10 py-7 h-fit">
+             
               <h3
                 className={`${dmSans.className} text-black text-[96px] font-light transition-all duration-300 group-hover:text-[64px]`}
               >
                 {service.title}
               </h3>
 
-              {/* Details */}
+              
               <div className="hidden w-[45%] grid-cols-2 gap-x-10 gap-y-2 text-base text-gray-800 group-hover:grid">
                 {service.details.map((item, i) => (
                   <p key={i}>{item}</p>
