@@ -83,7 +83,7 @@ const WorkSection = () => {
         </Marquee>
       </div>
 
-      <div className="max-w-7xl mx-auto px-10 py-5">
+      <div className="max-w-7xl mx-auto px-10 pt-1 pb-5">
         <div className="flex gap-2 mb-2">
           <div className="w-3/5 relative overflow-hidden rounded">
             <Image
