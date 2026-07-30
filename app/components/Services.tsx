@@ -58,7 +58,7 @@ const services = [
 const Services = () => {
   return (
     <section className="bg-white pt-6 pb-12 overflow-hidden">
-      {/* Marquee */}
+     
       <div className="overflow-hidden border-b border-gray-300 py-3">
         <Marquee speed={70} gradient={false}>
           {[1, 2, 3, 4].map((item) => (
@@ -66,7 +66,7 @@ const Services = () => {
               key={item}
               className="flex items-center whitespace-nowrap mr-24"
             >
-              {/* Flower */}
+              
               <Image
                 src="/images/flower.svg"
                 alt="Flower"

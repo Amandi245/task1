@@ -98,13 +98,13 @@ const WorkSection = () => {
 
             <div className="absolute bottom-5 left-5 right-5 flex justify-between items-end text-white">
               <h3
-                className={`${dmSans.className} font-medium text-yellow-300 max-w-[180px]`}
+                className={`${dmSans.className} text-[32px] font-medium leading-[120%] text-[#F5F360] max-w-[180px]`}
               >
                 {works[0].title}
               </h3>
 
               <p
-                className={`${dmSans.className} text-xs text-right max-w-[180px]`}
+                className={`${dmSans.className} text-[20px] font-normal leading-[150%] text-white text-right max-w-[180px]`}
               >
                 {works[0].description}
               </p>
@@ -124,13 +124,13 @@ const WorkSection = () => {
 
             <div className="absolute bottom-5 left-5 right-5 flex justify-between items-end text-white">
               <h3
-                className={`${dmSans.className} font-medium text-yellow-300 max-w-[180px]`}
+                className={`${dmSans.className} text-[32px] font-medium leading-[120%] text-[#F5F360] max-w-[180px]`}
               >
                 {works[1].title}
               </h3>
 
               <p
-                className={`${dmSans.className} text-xs text-right max-w-[180px]`}
+                className={`${dmSans.className} text-[20px] font-normal leading-[150%] text-white text-right max-w-[180px]`}
               >
                 {works[1].description}
               </p>
@@ -151,13 +151,13 @@ const WorkSection = () => {
 
           <div className="absolute bottom-5 left-5 right-5 flex justify-between items-end text-white">
             <h3
-              className={`${dmSans.className} font-medium text-yellow-300 max-w-[220px]`}
+              className={`${dmSans.className} text-[32px] font-medium leading-[120%] text-[#F5F360] max-w-[220px]`}
             >
               {works[2].title}
             </h3>
 
             <p
-              className={`${dmSans.className} text-xs text-right max-w-[250px]`}
+              className={`${dmSans.className} text-[20px] font-normal leading-[150%] text-white text-right max-w-[250px]`}
             >
               {works[2].description}
             </p>
@@ -178,13 +178,13 @@ const WorkSection = () => {
 
             <div className="absolute bottom-5 left-5 right-5 flex justify-between items-end text-white">
               <h3
-                className={`${dmSans.className} font-medium text-yellow-300 max-w-[180px]`}
+                className={`${dmSans.className} text-[32px] font-medium leading-[120%] text-[#F5F360] max-w-[180px]`}
               >
                 {works[3].title}
               </h3>
 
               <p
-                className={`${dmSans.className} text-xs text-right max-w-[180px]`}
+                className={`${dmSans.className} text-[20px] font-normal leading-[150%] text-white text-right max-w-[180px]`}
               >
                 {works[3].description}
               </p>
@@ -204,13 +204,13 @@ const WorkSection = () => {
 
             <div className="absolute bottom-5 left-5 right-5 flex justify-between items-end text-white">
               <h3
-                className={`${dmSans.className} font-medium text-yellow-300 max-w-[180px]`}
+                className={`${dmSans.className} text-[32px] font-medium leading-[120%] text-[#F5F360] max-w-[180px]`}
               >
                 {works[4].title}
               </h3>
 
               <p
-                className={`${dmSans.className} text-xs text-right max-w-[180px]`}
+                className={`${dmSans.className} text-[20px] font-normal leading-[150%] text-white text-right max-w-[180px]`}
               >
                 {works[4].description}
               </p>
