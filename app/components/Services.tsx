@@ -58,7 +58,6 @@ const services = [
 const Services = () => {
   return (
     <section className="bg-white pt-6 pb-12 overflow-hidden">
-     
       <div className="overflow-hidden border-b border-gray-300 py-3">
         <Marquee speed={70} gradient={false}>
           {[1, 2, 3, 4].map((item) => (
@@ -66,7 +65,6 @@ const Services = () => {
               key={item}
               className="flex items-center whitespace-nowrap mr-24"
             >
-              
               <Image
                 src="/images/flower.svg"
                 alt="Flower"
@@ -75,14 +73,12 @@ const Services = () => {
                 className="mr-10"
               />
 
-              
               <span
                 className={`${cormorant.className} text-[128px] font-bold uppercase text-[#D5D5D5] leading-none`}
               >
                 SERVICES
               </span>
 
-              
               <Image
                 src="/images/star.svg"
                 alt="Star"
@@ -91,7 +87,6 @@ const Services = () => {
                 className="ml-10 mr-10"
               />
 
-              
               <span
                 className={`${cormorant.className} text-[128px] font-bold uppercase text-[#D5D5D5] leading-none`}
               >
@@ -106,20 +101,22 @@ const Services = () => {
         {services.map((service, index) => (
           <div
             key={index}
-            className="group w-full border-b border-gray-300 hover:bg-[#F5F360] transition-all duration-300 cursor-pointer"
+            className="group w-full border-b border-gray-300 bg-white hover:bg-[#F5F360] transition-colors duration-500 cursor-pointer"
           >
-            <div className="mx-auto flex max-w-7xl items-start justify-between px-10 py-7 h-fit">
-             
-              <h3
-                className={`${dmSans.className} text-black text-[96px] font-light transition-all duration-300 group-hover:text-[64px]`}
-              >
-                {service.title}
-              </h3>
+            <div className="mx-auto flex max-w-7xl h-[220px] items-center justify-between px-10">
+              <div className="w-1/2">
+                <h3
+                  className={`${dmSans.className} text-[80px] font-light text-black transition-all duration-500 group-hover:text-[64px]`}
+                >
+                  {service.title}
+                </h3>
+              </div>
 
-              
-              <div className="hidden w-[45%] grid-cols-2 gap-x-10 gap-y-2 text-base text-gray-800 group-hover:grid">
+              <div className="w-[45%] grid grid-cols-2 gap-x-10 gap-y-3 opacity-0 translate-y-4 pointer-events-nonetransition-all duration-500 group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto">
                 {service.details.map((item, i) => (
-                  <p key={i}>{item}</p>
+                  <p key={i} className="text-base text-gray-800">
+                    {item}
+                  </p>
                 ))}
               </div>
             </div>
