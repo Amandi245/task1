@@ -4,6 +4,7 @@ import Services from "./components/Services";
 import WorkSection from "./components/WorkSection";
 import Testimonials from "./components/Testimonials";
 import ContactSection from "./components/ContactSection";
+import Footer from "./components/Footer";
 
 
 export default function Home() {
@@ -15,6 +16,7 @@ export default function Home() {
       <WorkSection />
       <Testimonials/>
       <ContactSection />
+      <Footer />
     </>
     
        
