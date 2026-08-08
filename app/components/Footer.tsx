@@ -25,9 +25,7 @@ const Footer = () => {
             className="mb-6"
           />
 
-          <p
-            className={`${dmSans.className} max-w-[400px] text-[18px] leading-8`}
-          >
+          <p className={`${dmSans.className} max-w-100 text-[18px] leading-8`}>
             Elevate Agency helps brands rise above the
             <br />
             noise with bold ideas and smart strategies.
@@ -38,39 +36,39 @@ const Footer = () => {
           </p>
         </div>
 
-        <div className="flex w-[20%] justify-end px-16 py-12">
-          <div className="flex flex-col gap-3">
+        <div className="ml-auto flex w-[20%] justify-end pl-0 pr-0 py-12">
+          <div className="flex w-full flex-col items-end gap-3 text-right">
             <Link
               href="/"
-              className={`${dmSans.className} text-[36px] text-black hover:opacity-70`}
+              className={`${dmSans.className} text-[36px] text-[#7F7E2C] transition-colors hover:text-black`}
             >
               home
             </Link>
 
             <Link
               href="/about"
-              className={`${dmSans.className} text-[36px] text-black hover:opacity-70`}
+              className={`${dmSans.className} text-[36px] text-[#7F7E2C] transition-colors hover:text-black`}
             >
               about
             </Link>
 
             <Link
               href="/services"
-              className={`${dmSans.className} text-[36px] text-black hover:opacity-70`}
+              className={`${dmSans.className} text-[36px] text-[#7F7E2C] transition-colors hover:text-black`}
             >
               services
             </Link>
 
             <Link
               href="/portfolio"
-              className={`${dmSans.className} text-[36px] text-black hover:opacity-70`}
+              className={`${dmSans.className} text-[36px] text-[#7F7E2C] transition-colors hover:text-black`}
             >
               portfolio
             </Link>
 
             <Link
               href="/contact"
-              className={`${dmSans.className} text-[36px] text-black hover:opacity-70`}
+              className={`${dmSans.className} text-[36px] text-[#7F7E2C] transition-colors hover:text-black`}
             >
               contact
             </Link>
@@ -80,12 +78,12 @@ const Footer = () => {
 
       <div className="border-t border-black/30">
         <div className="mx-auto flex max-w-7xl items-end justify-between px-10 py-8">
-          <h2 className={`${cormorant.className} text-[256px] leading-none`}>
+          <h2 className={`${cormorant.className} text-[256px] leading-[0.85]`}>
             Elevate
           </h2>
 
           <div
-            className={`${dmSans.className} text-right text-[14px] leading-7`}
+            className={`${dmSans.className} self-end text-right text-[14px] leading-5 pb-4`}
           >
             <p>Privacy-policy</p>
             <p>terms & conditions</p>
