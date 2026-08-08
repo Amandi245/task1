@@ -161,7 +161,13 @@ const Testimonials = () => {
                 "{item.review}"
               </p>
 
-              <div className="-mx-6 border-t border-black/20 mt-6 pt-4 px-6 flex items-center gap-4">
+              <div
+                className="-mx-6 border-t mt-6 pt-4 px-6 flex items-center gap-4"
+                style={{
+                  borderTopColor:
+                    index % 2 === 0 ? "#000000" : "#ffffff",
+                }}
+              >
                 <Image
                   src={item.avatar}
                   alt={item.name}
