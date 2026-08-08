@@ -164,8 +164,7 @@ const Testimonials = () => {
               <div
                 className="-mx-6 border-t mt-6 pt-4 px-6 flex items-center gap-4"
                 style={{
-                  borderTopColor:
-                    index % 2 === 0 ? "#000000" : "#ffffff",
+                  borderTopColor: index % 2 === 0 ? "#000000" : "#ffffff",
                 }}
               >
                 <Image
