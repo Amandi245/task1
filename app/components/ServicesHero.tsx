@@ -192,7 +192,7 @@ export default function ServicesHero() {
               </h3>
 
               {/* Icon Graphic - Positioned to the far left */}
-              <div className="my-auto py-4 flex items-center justify-start -ml-10git add . sm:-ml-7">
+              <div className="my-auto py-4 flex items-center justify-start -ml-10 sm:-ml-7">
                 {service.graphic}
               </div>
 
