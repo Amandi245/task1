@@ -1,59 +1,45 @@
 import Image from "next/image";
-import { Cormorant_Garamond } from "next/font/google";
+import { Bodoni_Moda } from "next/font/google";
 
-const cormorant = Cormorant_Garamond({
+const editorial = Bodoni_Moda({
   subsets: ["latin"],
-  weight: ["500", "600", "700"],
-  style: ["normal", "italic"],
+  style: ["italic"],
 });
 
-const AboutGlance = () => {
+export default function AboutGlance() {
   return (
-    <section className="bg-white px-6 pb-8 pt-20 md:px-10 md:pt-28">
-      <div className="mx-auto max-w-6xl">
-        <h2
-          className={`${cormorant.className} mb-14 text-center text-[36px] leading-tight text-black sm:text-[48px] md:mb-20 md:text-[56px]`}
-        >
-          a quick glance at <em className="italic font-semibold">Elevate</em>
-        </h2>
-
-        <div className="relative mx-auto max-w-4xl">
-          <div
-            aria-hidden="true"
-            className="pointer-events-none absolute left-1/2 top-1/2 h-[85%] w-[90%] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#F5F360] opacity-70 blur-[70px]"
-          />
-          <div
-            aria-hidden="true"
-            className="absolute inset-x-6 inset-y-8 rotate-[-6deg] rounded-sm bg-white shadow-[0_20px_50px_rgba(0,0,0,0.12)] md:inset-x-10"
-          />
-          <div
-            aria-hidden="true"
-            className="absolute inset-x-8 inset-y-6 rotate-[5deg] rounded-sm bg-[#F5F360] shadow-lg md:inset-x-14"
-          />
-
-          <div className="relative rotate-[-1.5deg] overflow-hidden rounded-sm bg-white p-2 shadow-[0_24px_60px_rgba(0,0,0,0.18)] md:p-3">
-            <Image
-              src="/images/team-group.png"
-              alt="The Elevate team gathered outdoors"
-              width={1200}
-              height={700}
-              className="h-[240px] w-full object-cover sm:h-[340px] md:h-[420px]"
-            />
-          </div>
-        </div>
-
-        <div className="mt-14 flex justify-center md:mt-16">
-          <Image
-            src="/images/flower.svg"
-            alt=""
-            width={48}
-            height={48}
-            className="h-10 w-10 md:h-12 md:w-12"
-          />
-        </div>
+    <section
+      className="relative h-[420px] pt-[38px] text-center min-[601px]:h-[78.1vw] min-[601px]:pt-[5.7vw]"
+      aria-labelledby="glance-title"
+    >
+      <div className="pointer-events-none absolute left-1/2 top-[2%] h-[81%] w-[56%] -translate-x-1/2 bg-[radial-gradient(ellipse_closest-side,#f5f55b_0%,#f5f55b_40%,rgb(245_245_91_/_85%)_57%,rgb(245_245_91_/_35%)_76%,transparent_100%)]" />
+      <h2
+        id="glance-title"
+        className="relative text-[27px] min-[601px]:text-[5.55vw]"
+      >
+        a quick glance at <em className={editorial.className}>Elevate</em>
+      </h2>
+      <div className="relative mx-auto mt-[38px] h-[48vw] w-[82vw] min-[601px]:mt-[7.3vw] min-[601px]:h-[35.2vw] min-[601px]:w-[64.6vw]">
+        <Image
+          src="/images/office.png"
+          alt=""
+          fill
+          className="rotate-[-4deg] object-cover shadow-[0_2vw_2.7vw_#0003]"
+        />
+        <Image
+          src="/images/team-group.png"
+          alt="The Elevate team gathered together outdoors"
+          fill
+          className="rotate-[3.4deg] object-cover shadow-[0_2vw_2.7vw_#0003]"
+        />
       </div>
+      <Image
+        className="absolute bottom-[29px] left-[calc(50%-19px)] h-[38px] w-[38px] min-[601px]:bottom-[7.8vw] min-[601px]:left-[46.85%] min-[601px]:h-[6.3vw] min-[601px]:w-[6.3vw]"
+        src="/images/flower.svg"
+        alt=""
+        width={100}
+        height={100}
+      />
     </section>
   );
-};
-
-export default AboutGlance;
+}
