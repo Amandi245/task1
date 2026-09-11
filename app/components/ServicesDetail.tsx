@@ -71,7 +71,7 @@ export default function ServicesDetail() {
       {serviceSections.map((service) => (
         <div
           key={service.id}
-          className={`relative w-full ${service.bgColor} ${service.textColor} overflow-hidden py-14 sm:py-10 md:py-20 px-6 sm:px-12 md:px-16 lg:px-20`}
+          className={`relative w-full ${service.bgColor} ${service.textColor} overflow-hidden py-14 sm:py-16 md:py-20 px-6 sm:px-12 md:px-16 lg:px-20`}
         >
           <div className="max-w-7xl mx-auto relative z-10">
             {/* Top Row: Title & Top Right Text */}
@@ -128,8 +128,8 @@ export default function ServicesDetail() {
             </div>
           </div>
 
-          {/* Right Side Background Graphic Overlay */}
-          <div className="absolute -right-12 sm:-right-16 md:-right-20 top-1/2 -translate-y-1/2 w-[280px] sm:w-[380px] md:w-[480px] lg:w-[540px] h-[280px] sm:h-[380px] md:h-[480px] lg:h-[540px] pointer-events-none opacity-85">
+          {/* Right Side Background Graphic Overlay (Design matching) */}
+          <div className="absolute -right-10 top-1/2 -translate-y-1/2 w-[515px] h-[515px] pointer-events-none opacity-90 z-0">
             <Image
               src={service.graphic}
               alt={service.title}
@@ -138,7 +138,6 @@ export default function ServicesDetail() {
             />
           </div>
         </div>
-        
       ))}
     </section>
   );

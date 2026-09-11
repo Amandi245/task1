@@ -26,11 +26,11 @@ export default function ServicesHero() {
       descColor: "text-[#2A2A2A]",
       graphic: (
         <Image
-          src="/images/brand1.svg"
+          src="/images/herocart1.svg"
           alt="Branding & Strategy"
-          width={140}
-          height={140}
-          className="w-32 h-32 sm:w-36 sm:h-36 object-contain"
+          width={160}
+          height={160}
+          className="w-52 h-52 sm:w-60 sm:h-60 object-contain"
         />
       ),
     },
@@ -44,11 +44,11 @@ export default function ServicesHero() {
       descColor: "text-amber-50/90",
       graphic: (
         <Image
-          src="/images/digital2.svg"
+          src="/images/herocart2.svg"
           alt="Digital & Web Development"
-          width={140}
-          height={140}
-          className="w-32 h-32 sm:w-36 sm:h-36 object-contain"
+          width={160}
+          height={160}
+          className="w-52 h-52 sm:w-60 sm:h-60 object-contain"
         />
       ),
     },
@@ -62,11 +62,11 @@ export default function ServicesHero() {
       descColor: "text-[#2A2A2A]",
       graphic: (
         <Image
-          src="/images/content3.svg"
+          src="/images/herocart4.svg"
           alt="Creative & Content"
-          width={140}
-          height={140}
-          className="w-32 h-32 sm:w-36 sm:h-36 object-contain"
+          width={160}
+          height={160}
+          className="w-52 h-52 sm:w-60 sm:h-60 object-contain"
         />
       ),
     },
@@ -80,11 +80,11 @@ export default function ServicesHero() {
       descColor: "text-emerald-100/90",
       graphic: (
         <Image
-          src="/images/marketing4.svg"
+          src="/images/herocart3.svg"
           alt="Marketing & Promotion"
-          width={140}
-          height={140}
-          className="w-32 h-32 sm:w-36 sm:h-36 object-contain"
+          width={160}
+          height={160}
+          className="w-52 h-52 sm:w-60 sm:h-60 object-contain"
         />
       ),
     },
@@ -132,7 +132,7 @@ export default function ServicesHero() {
           >
             services
           </Link>
-          <Link href="/#work" className="hover:opacity-60 transition-opacity">
+          <Link href="/work" className="hover:opacity-60 transition-opacity">
             work
           </Link>
           <Link
@@ -182,7 +182,7 @@ export default function ServicesHero() {
           {services.map((service) => (
             <div
               key={service.id}
-              className={`${service.bgColor} rounded-2xl p-6 sm:p-7 min-h-[460px] flex flex-col justify-between transition-transform duration-300 hover:-translate-y-1 shadow-sm overflow-hidden`}
+              className={`${service.bgColor} rounded-[6px] p-6 sm:p-7 min-h-[460px] flex flex-col justify-between transition-transform duration-300 hover:-translate-y-1 shadow-sm overflow-hidden`}
             >
               {/* Title */}
               <h3
@@ -192,7 +192,7 @@ export default function ServicesHero() {
               </h3>
 
               {/* Icon Graphic - Positioned to the far left */}
-              <div className="my-auto py-4 flex items-center justify-start -ml-10 sm:-ml-7">
+              <div className="my-auto py-4 flex items-center justify-start  sm:-ml-24">
                 {service.graphic}
               </div>
 

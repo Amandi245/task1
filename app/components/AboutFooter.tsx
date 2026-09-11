@@ -36,8 +36,8 @@ export default function Footer() {
         <div>
           <Gauge className="mb-[15px] h-9 w-9 text-[#353914] min-[601px]:h-[5.5vw] min-[601px]:w-[5.5vw]" />
           <p className="max-w-[230px] text-xs text-[#393b24] min-[601px]:max-w-none min-[601px]:text-[1.87vw]">
-            Elevate Agency helps brands rise above the noise with bold ideas and
-            smart strategies. We craft campaigns that inspire, engage, and drive
+            Elevate Agency helps brands rise above the<br/> noise with bold ideas and
+            smart strategies.<br/> We craft campaigns that inspire, engage,and<br/> drive
             real results.
           </p>
         </div>
