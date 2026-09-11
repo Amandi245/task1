@@ -92,7 +92,7 @@ export default function ServicesHero() {
 
   return (
     <section
-      className={`relative min-h-screen w-full bg-[#FAFAFA] text-gray-900 overflow-hidden pb-16 ${inter.className}`}
+      className={`relative min-h-0 w-full bg-[#FAFAFA] text-gray-900 overflow-hidden pb-8 sm:min-h-screen sm:pb-16 ${inter.className}`}
     >
       {/* Background Soft Yellow Radial Glow */}
       <div
@@ -105,24 +105,24 @@ export default function ServicesHero() {
       />
 
       {/* Built-in Top Navbar */}
-      <header className="relative z-30 w-full max-w-7xl mx-auto px-6 py-6 flex items-center justify-between">
+      <header className="relative z-30 w-full max-w-7xl mx-auto px-4 py-4 sm:px-6 sm:py-6 flex items-center justify-between">
         <Link href="/" className="flex items-center space-x-2.5">
           <Image
             src="/images/hero-gauge.svg"
             alt="Elevate Logo"
             width={24}
             height={24}
-            className="w-6 h-6 object-contain"
+            className="w-4 h-4 sm:w-6 sm:h-6 object-contain"
             priority
           />
           <span
-            className={`${playfair.className} text-2xl font-normal text-gray-900 tracking-tight`}
+            className={`${playfair.className} text-sm sm:text-2xl font-normal text-gray-900 tracking-tight`}
           >
             Elevate
           </span>
         </Link>
 
-        <nav className="flex items-center space-x-6 sm:space-x-10 text-sm font-normal text-gray-900">
+        <nav className="hidden sm:flex items-center space-x-6 sm:space-x-10 text-sm font-normal text-gray-900">
           <Link href="/about" className="hover:opacity-60 transition-opacity">
             about
           </Link>
@@ -142,42 +142,50 @@ export default function ServicesHero() {
             contact
           </Link>
         </nav>
+        <button
+          type="button"
+          aria-label="Open navigation menu"
+          className="flex sm:hidden h-6 w-6 flex-col items-center justify-center gap-1"
+        >
+          <span className="block h-px w-3 bg-gray-900" />
+          <span className="block h-px w-3 bg-gray-900" />
+        </button>
       </header>
 
       {/* Hero Content */}
-      <div className="relative z-10 max-w-7xl mx-auto px-6 pt-2 text-center">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 pt-4 sm:px-6 sm:pt-2 text-center">
         {/* Top Clock/Gauge Icon */}
-        <div className="flex justify-center mb-2">
+        <div className="flex justify-center mb-1 sm:mb-2">
           <Image
             src="/images/hero-gauge.svg"
             alt="Gauge Icon"
             width={36}
             height={36}
-            className="w-9 h-9 object-contain"
+            className="w-6 h-6 sm:w-9 sm:h-9 object-contain"
             priority
           />
         </div>
 
         {/* Header Titles */}
         <div className="flex flex-col items-center">
-          <span className="text-4xl sm:text-5xl md:text-6xl text-[#D5DB5C] font-light tracking-tight">
+          <span className="text-3xl sm:text-5xl md:text-6xl text-[#D5DB5C] font-light tracking-tight">
             our
           </span>
           <h1
-            className={`${playfair.className} text-7xl sm:text-8xl md:text-9xl text-[#D5DB5C] tracking-normal font-normal leading-none -mt-2 sm:-mt-3`}
+            className={`${playfair.className} text-5xl sm:text-8xl md:text-9xl text-[#D5DB5C] tracking-normal font-normal leading-none -mt-1 sm:-mt-3`}
           >
             Services
           </h1>
         </div>
 
         {/* Subtitle */}
-        <p className="mt-4 text-gray-600 text-base sm:text-lg md:text-xl font-light tracking-wide max-w-xl mx-auto">
+        <p className="mt-2 sm:mt-4 text-gray-600 text-[9px] sm:text-lg md:text-xl font-light tracking-wide max-w-xl mx-auto">
           Comprehensive Services, Exceptional Results
         </p>
       </div>
 
       {/* Services Grid */}
-      <div className="relative z-10 max-w-7xl mx-auto px-6 mt-10">
+      <div className="relative z-10 hidden max-w-7xl mx-auto px-6 mt-10 sm:block">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
           {services.map((service) => (
             <div

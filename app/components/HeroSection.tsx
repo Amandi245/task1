@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { Cormorant_Garamond } from "next/font/google";
 import Navbar from "./Navbar";
 
@@ -27,15 +26,15 @@ const HeroSection = () => {
         <Navbar />
       </div>
 
-      <div className="absolute inset-0 flex flex-col items-center justify-end pb-30 z-20">
+      <div className="absolute inset-0 flex flex-col items-center justify-end pb-16 sm:pb-30 z-20 px-4">
         <h1
-          className={`${cormorant.className} text-[240px] font-bold leading-none text-[#F5F360]`}
+          className={`${cormorant.className} text-[72px] sm:text-[140px] lg:text-[240px] font-bold leading-none text-[#F5F360]`}
         >
           Elevate
         </h1>
-        <p className="mt-2 text-5xl font-normal text-white">
+        <p className="mt-2 text-2xl sm:text-5xl font-normal text-white text-center">
           Ideas{" "}
-          <span className=" mx-3 text-base text-[#F5F360] font-normal align-middle">
+          <span className="mx-2 sm:mx-3 text-xs sm:text-base text-[#F5F360] font-normal align-middle">
             into
           </span>{" "}
           Experiences.

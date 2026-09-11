@@ -16,14 +16,14 @@ const ContactSection = () => {
     <>
       <section
         id="contact"
-        className="relative min-h-[900px] overflow-hidden bg-white py-24"
+        className="relative min-h-[620px] overflow-hidden bg-white py-12 sm:min-h-[900px] sm:py-24"
       >
         {/* Yellow glow */}
         <div
           className="
       pointer-events-none
       absolute left-1/2 -translate-x-1/2
-      w-[70rem] h-auto aspect-square top-100
+      w-[34rem] sm:w-[70rem] h-auto aspect-square top-64 sm:top-100
       rounded-full
       bg-[#F5F360]
       opacity-100
@@ -31,9 +31,9 @@ const ContactSection = () => {
     "
         />
 
-        <div className="relative z-10 mx-auto flex min-h-[750px] max-w-7xl flex-col items-center px-10">
+        <div className="relative z-10 mx-auto flex min-h-[500px] max-w-7xl flex-col items-center px-5 sm:min-h-[750px] sm:px-10">
           {/* Star + Heading */}
-          <div className="flex flex-col items-center gap-20">
+          <div className="flex flex-col items-center gap-10 sm:gap-20">
             <Image
               src="/images/star.svg"
               alt="Star"
@@ -43,20 +43,20 @@ const ContactSection = () => {
             />
 
             <h2
-              className={`${cormorant.className}  mt-auto text-center text-[110px] leading-none tracking-[-0.02em] text-black md:text-[176px]`}
+              className={`${cormorant.className} mt-auto text-center text-[64px] leading-none tracking-[-0.02em] text-black md:text-[176px]`}
             >
               Say Hello
             </h2>
           </div>
 
           {/* Intro text */}
-          <div className="mt-40 text-center font-bold">
+          <div className="mt-16 text-center font-bold sm:mt-40">
             <p className={`${dmSans.className} text-[14px] text-black`}>
               Got an idea in mind?
             </p>
 
             <p className={`${dmSans.className} text-[14px] text-black`}>
-              Let's turn it into something amazing together.
+              Let&apos;s turn it into something amazing together.
             </p>
           </div>
 

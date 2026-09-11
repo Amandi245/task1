@@ -70,11 +70,11 @@ const Services = () => {
                 alt="Flower"
                 width={55}
                 height={55}
-                className="mr-10"
+                className="mr-4 h-7 w-7 sm:mr-10 sm:h-auto sm:w-auto"
               />
 
               <span
-                className={`${cormorant.className} text-[128px] font-bold uppercase text-[#D5D5D5] leading-none`}
+                className={`${cormorant.className} text-[52px] sm:text-[128px] font-bold uppercase text-[#D5D5D5] leading-none`}
               >
                 SERVICES
               </span>
@@ -84,11 +84,11 @@ const Services = () => {
                 alt="Star"
                 width={55}
                 height={55}
-                className="ml-10 mr-10"
+                className="mx-4 h-7 w-7 sm:mx-10 sm:h-auto sm:w-auto"
               />
 
               <span
-                className={`${cormorant.className} text-[128px] font-bold uppercase text-[#D5D5D5] leading-none`}
+                className={`${cormorant.className} text-[52px] sm:text-[128px] font-bold uppercase text-[#D5D5D5] leading-none`}
               >
                 SERVICES
               </span>
@@ -103,16 +103,16 @@ const Services = () => {
             key={index}
             className="group w-full cursor-pointer border-b border-gray-300 bg-white transition-colors duration-500 hover:bg-[#F5F360]"
           >
-            <div className="mx-auto flex h-[180px] max-w-7xl items-center justify-between px-10">
-              <div className="w-1/2">
+            <div className="mx-auto flex min-h-[150px] max-w-7xl flex-col items-start justify-center gap-3 px-4 py-5 sm:h-[180px] sm:flex-row sm:items-center sm:justify-between sm:px-10 sm:py-0">
+              <div className="w-full sm:w-1/2">
                 <h3
-                  className={`${dmSans.className} whitespace-nowrap text-[96px] font-[300] leading-[1.2] tracking-[0] text-black transition-all duration-500 group-hover:text-[60px] group-hover:font-[500] group-hover:leading-[1.2]`}
+                  className={`${dmSans.className} text-3xl font-[300] leading-tight tracking-[0] text-black transition-all duration-500 sm:whitespace-nowrap sm:text-[96px] sm:leading-[1.2] sm:group-hover:text-[60px] sm:group-hover:font-[500]`}
                 >
                   {service.title}
                 </h3>
               </div>
 
-              <div className="grid w-[45%] grid-flow-col grid-rows-3 gap-x-10 gap-y-0 translate-y-4 opacity-0 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100">
+              <div className="grid w-full grid-cols-1 gap-y-1 opacity-100 sm:w-[45%] sm:grid-flow-col sm:grid-rows-3 sm:gap-x-10 sm:gap-y-0 sm:translate-y-4 sm:opacity-0 sm:transition-all sm:duration-500 sm:group-hover:translate-y-0 sm:group-hover:opacity-100">
                 {service.details.map((item, i) => (
                   <p
                     key={i}

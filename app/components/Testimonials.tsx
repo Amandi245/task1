@@ -78,11 +78,11 @@ const Testimonials = () => {
                 alt="Flower"
                 width={55}
                 height={55}
-                className="mr-10"
+                className="mr-4 h-7 w-7 sm:mr-10 sm:h-auto sm:w-auto"
               />
 
               <span
-                className={`${cormorant.className} text-[128px] font-bold uppercase text-[#D5D5D5] leading-none`}
+                className={`${cormorant.className} text-[52px] sm:text-[128px] font-bold uppercase text-[#D5D5D5] leading-none`}
               >
                 TESTIMONIALS
               </span>
@@ -92,11 +92,11 @@ const Testimonials = () => {
                 alt="Star"
                 width={55}
                 height={55}
-                className="mx-10"
+                className="mx-4 h-7 w-7 sm:mx-10 sm:h-auto sm:w-auto"
               />
 
               <span
-                className={`${cormorant.className} text-[128px] font-bold uppercase text-[#D5D5D5] leading-none`}
+                className={`${cormorant.className} text-[52px] sm:text-[128px] font-bold uppercase text-[#D5D5D5] leading-none`}
               >
                 TESTIMONIALS
               </span>
@@ -109,13 +109,13 @@ const Testimonials = () => {
         {testimonials.map((item, index) => (
           <article
             key={item.title}
-            className="flex h-[300px] w-full overflow-hidden rounded md:flex-row"
+            className="flex min-h-[500px] w-full flex-col overflow-hidden rounded md:h-[300px] md:flex-row md:min-h-0"
             style={{
               backgroundColor: item.bg,
               color: item.text,
             }}
           >
-            <div className="relative h-full w-full shrink-0 md:w-[27%]">
+            <div className="relative h-48 w-full shrink-0 md:h-full md:w-[27%]">
               <Image
                 src={item.image}
                 alt={item.title}
@@ -125,10 +125,10 @@ const Testimonials = () => {
               />
             </div>
 
-            <div className="flex w-full flex-col justify-between px-8 py-6 md:w-[43%]">
+            <div className="flex w-full flex-col justify-between px-5 py-5 md:w-[43%] md:px-8 md:py-6">
               <div>
                 <h3
-                  className={`${dmSans.className} max-w-[10ch] text-[40px] font-medium leading-[100%] tracking-[-0.03em]`}
+                  className={`${dmSans.className} max-w-[14ch] text-3xl font-medium leading-[100%] tracking-[-0.03em] md:text-[40px]`}
                 >
                   {item.title}
                 </h3>
@@ -152,13 +152,13 @@ const Testimonials = () => {
             </div>
 
             <div
-              className="flex h-full w-full flex-col px-6 pt-4 md:w-[30%] md:border-l"
+              className="flex w-full flex-col px-5 pt-4 pb-3 md:h-full md:w-[30%] md:px-6 md:pb-0 md:border-l"
               style={{
                 borderLeftColor: index % 2 === 0 ? "#000000" : "#ffffff",
               }}
             >
               <p className={`${dmSans.className} text-[14px] leading-[15px]`}>
-                "{item.review}"
+                &quot;{item.review}&quot;
               </p>
 
               <div className="mt-auto mb-2">

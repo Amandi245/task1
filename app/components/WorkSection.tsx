@@ -56,11 +56,11 @@ const WorkSection = () => {
                 alt="Flower"
                 width={55}
                 height={55}
-                className="mr-10"
+                className="mr-4 h-7 w-7 sm:mr-10 sm:h-auto sm:w-auto"
               />
 
               <span
-                className={`${cormorant.className} text-[128px] font-bold uppercase text-[#D5D5D5] leading-none`}
+                className={`${cormorant.className} text-[52px] sm:text-[128px] font-bold uppercase text-[#D5D5D5] leading-none`}
               >
                 WORK
               </span>
@@ -70,11 +70,11 @@ const WorkSection = () => {
                 alt="Star"
                 width={55}
                 height={55}
-                className="mx-10"
+                className="mx-4 h-7 w-7 sm:mx-10 sm:h-auto sm:w-auto"
               />
 
               <span
-                className={`${cormorant.className} text-[128px] font-bold uppercase text-[#D5D5D5] leading-none`}
+                className={`${cormorant.className} text-[52px] sm:text-[128px] font-bold uppercase text-[#D5D5D5] leading-none`}
               >
                 WORK
               </span>
@@ -83,20 +83,20 @@ const WorkSection = () => {
         </Marquee>
       </div>
 
-      <div className="max-w-7xl mx-auto px-10 pt-1 pb-5">
-        <div className="flex gap-2 mb-2">
-          <div className="w-3/5 relative overflow-hidden rounded">
+      <div className="max-w-7xl mx-auto px-4 sm:px-10 pt-1 pb-5">
+        <div className="flex flex-col gap-2 mb-2 sm:flex-row">
+          <div className="relative w-full overflow-hidden rounded sm:w-3/5">
             <Image
               src={works[0].image}
               alt={works[0].title}
               width={800}
               height={400}
-              className="w-full h-[300px] object-cover"
+              className="w-full h-[220px] sm:h-[300px] object-cover"
             />
 
             <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black/90 via-black/40 to-transparent" />
 
-            <div className="absolute bottom-5 left-5 right-5 flex justify-between items-end text-white">
+            <div className="absolute bottom-4 left-4 right-4 flex flex-col gap-2 items-start text-white sm:bottom-5 sm:left-5 sm:right-5 sm:flex-row sm:justify-between sm:items-end">
               <h3
                 className={`${dmSans.className} text-[20px] font-normal leading-[120%] text-[#F5F360] max-w-[180px]`}
               >
@@ -111,18 +111,18 @@ const WorkSection = () => {
             </div>
           </div>
 
-          <div className="w-2/5 relative overflow-hidden rounded">
+          <div className="relative w-full overflow-hidden rounded sm:w-2/5">
             <Image
               src={works[1].image}
               alt={works[1].title}
               width={600}
               height={400}
-              className="w-full h-[300px] object-cover"
+              className="w-full h-[220px] sm:h-[300px] object-cover"
             />
 
             <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black/90 via-black/40 to-transparent" />
 
-            <div className="absolute bottom-5 left-5 right-5 flex justify-between items-end text-white">
+            <div className="absolute bottom-4 left-4 right-4 flex flex-col gap-2 items-start text-white sm:bottom-5 sm:left-5 sm:right-5 sm:flex-row sm:justify-between sm:items-end">
               <h3
                 className={`${dmSans.className} text-[20px] font-medium leading-[120%] text-[#F5F360] max-w-[180px]`}
               >
@@ -144,12 +144,12 @@ const WorkSection = () => {
             alt={works[2].title}
             width={1200}
             height={650}
-            className="w-full h-[450px] object-cover"
+            className="w-full h-[260px] sm:h-[450px] object-cover"
           />
 
           <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black/90 via-black/40 to-transparent" />
 
-          <div className="absolute bottom-5 left-5 right-5 flex justify-between items-end text-white">
+          <div className="absolute bottom-4 left-4 right-4 flex flex-col gap-2 items-start text-white sm:bottom-5 sm:left-5 sm:right-5 sm:flex-row sm:justify-between sm:items-end">
             <h3
               className={`${dmSans.className} text-[20px] font-medium leading-[120%] text-[#F5F360] max-w-[220px]`}
             >
@@ -164,19 +164,19 @@ const WorkSection = () => {
           </div>
         </div>
 
-        <div className="flex gap-2">
-          <div className="w-2/5 relative overflow-hidden rounded">
+        <div className="flex flex-col gap-2 sm:flex-row">
+          <div className="relative w-full overflow-hidden rounded sm:w-2/5">
             <Image
               src={works[3].image}
               alt={works[3].title}
               width={600}
               height={400}
-              className="w-full h-[300px] object-cover"
+              className="w-full h-[220px] sm:h-[300px] object-cover"
             />
 
             <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black/90 via-black/40 to-transparent" />
 
-            <div className="absolute bottom-5 left-5 right-5 flex justify-between items-end text-white">
+            <div className="absolute bottom-4 left-4 right-4 flex flex-col gap-2 items-start text-white sm:bottom-5 sm:left-5 sm:right-5 sm:flex-row sm:justify-between sm:items-end">
               <h3
                 className={`${dmSans.className} text-[20px] font-medium leading-[120%] text-[#F5F360] max-w-[180px]`}
               >
@@ -191,18 +191,18 @@ const WorkSection = () => {
             </div>
           </div>
 
-          <div className="w-3/5 relative overflow-hidden rounded">
+          <div className="relative w-full overflow-hidden rounded sm:w-3/5">
             <Image
               src={works[4].image}
               alt={works[4].title}
               width={800}
               height={400}
-              className="w-full h-[300px] object-cover"
+              className="w-full h-[220px] sm:h-[300px] object-cover"
             />
 
             <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black/90 via-black/40 to-transparent" />
 
-            <div className="absolute bottom-5 left-5 right-5 flex justify-between items-end text-white">
+            <div className="absolute bottom-4 left-4 right-4 flex flex-col gap-2 items-start text-white sm:bottom-5 sm:left-5 sm:right-5 sm:flex-row sm:justify-between sm:items-end">
               <h3
                 className={`${dmSans.className} text-[20px] font-medium leading-[120%] text-[#F5F360] max-w-[180px]`}
               >

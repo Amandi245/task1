@@ -32,17 +32,18 @@ export default function Footer() {
           <span aria-hidden="true">✦</span> Lets Talk
         </Link>
       </div>
-      <div className="flex justify-between gap-5 px-[22px] pb-[60px] pt-[95px] min-[601px]:min-h-[50.9vw] min-[601px]:px-[3.45vw] min-[601px]:pb-[10.7vw] min-[601px]:pt-[19.4vw]">
+      <div className="flex flex-col justify-between gap-12 px-[22px] pb-[60px] pt-[95px] min-[601px]:min-h-[50.9vw] min-[601px]:flex-row min-[601px]:gap-5 min-[601px]:px-[3.45vw] min-[601px]:pb-[10.7vw] min-[601px]:pt-[19.4vw]">
         <div>
           <Gauge className="mb-[15px] h-9 w-9 text-[#353914] min-[601px]:h-[5.5vw] min-[601px]:w-[5.5vw]" />
           <p className="max-w-[230px] text-xs text-[#393b24] min-[601px]:max-w-none min-[601px]:text-[1.87vw]">
-            Elevate Agency helps brands rise above the<br/> noise with bold ideas and
-            smart strategies.<br/> We craft campaigns that inspire, engage,and<br/> drive
-            real results.
+            Elevate Agency helps brands rise above the
+            <br /> noise with bold ideas and smart strategies.
+            <br /> We craft campaigns that inspire, engage,and
+            <br /> drive real results.
           </p>
         </div>
         <nav
-          className="flex flex-col items-end gap-[6px] text-[19px] text-[#97973d] min-[601px]:gap-[.55vw] min-[601px]:text-[2.9vw]"
+          className="flex flex-col items-start gap-[6px] text-[19px] text-[#97973d] min-[601px]:items-end min-[601px]:gap-[.55vw] min-[601px]:text-[2.9vw]"
           aria-label="Footer navigation"
         >
           <Link href="/">home</Link>

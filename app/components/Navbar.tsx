@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useState } from "react";
 import { Cormorant_Garamond, DM_Sans } from "next/font/google";
 
 const cormorant = Cormorant_Garamond({
@@ -25,6 +26,7 @@ const links = [
 const Navbar = () => {
   const pathname = usePathname();
   const isAbout = pathname === "/about";
+  const [menuOpen, setMenuOpen] = useState(false);
 
   return (
     <nav className="relative z-30 flex items-center justify-between px-6 py-6 md:px-12">
@@ -62,7 +64,7 @@ const Navbar = () => {
       </Link>
 
       <ul
-        className={`${dmSans.className} flex gap-5 text-[12px] font-normal lowercase text-white md:gap-10 md:text-[13px]`}
+        className={`${dmSans.className} hidden gap-5 text-[12px] font-normal lowercase text-white md:flex md:gap-10 md:text-[13px]`}
       >
         {links.map((link) => {
           const isActive = link.href === "/about" && pathname === "/about";
@@ -81,6 +83,29 @@ const Navbar = () => {
           );
         })}
       </ul>
+      <button
+        type="button"
+        aria-label="Toggle navigation menu"
+        aria-expanded={menuOpen}
+        onClick={() => setMenuOpen((open) => !open)}
+        className="flex h-8 w-8 flex-col items-center justify-center gap-1 md:hidden"
+      >
+        <span className="h-px w-4 bg-current" />
+        <span className="h-px w-4 bg-current" />
+      </button>
+      {menuOpen && (
+        <ul
+          className={`${dmSans.className} absolute right-6 top-16 flex flex-col gap-4 bg-black/90 px-5 py-4 text-sm lowercase text-white md:hidden`}
+        >
+          {links.map((link) => (
+            <li key={link.href}>
+              <Link href={link.href} onClick={() => setMenuOpen(false)}>
+                {link.label}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      )}
     </nav>
   );
 };

@@ -14,9 +14,9 @@ const cormorant = Cormorant_Garamond({
 
 const Footer = () => {
   return (
-    <footer className="bg-[#F5F360] text-black border-t border-black/30 pt-24 pb-0">
-      <div className="mx-auto flex max-w-7xl">
-        <div className="w-[80%] border-r border-black/30 px-10 py-12">
+    <footer className="bg-[#F5F360] text-black border-t border-black/30 pt-12 sm:pt-24 pb-0">
+      <div className="mx-auto flex max-w-7xl flex-col sm:flex-row">
+        <div className="w-full border-b border-black/30 px-5 py-8 sm:w-[80%] sm:border-b-0 sm:border-r sm:px-10 sm:py-12">
           <Image
             src="/images/footer-logo.svg"
             alt="Logo"
@@ -25,50 +25,48 @@ const Footer = () => {
             className="mb-6"
           />
 
-          <p className={`${dmSans.className} max-w-100 text-[18px] leading-8`}>
-            Elevate Agency helps brands rise above the
-            <br />
-            noise with bold ideas and smart strategies.
-            <br />
-            We craft campaigns that inspire, engage,
-            <br />
-            and drive real results.
+          <p
+            className={`${dmSans.className} max-w-100 text-sm leading-6 sm:text-[18px] sm:leading-8`}
+          >
+            Elevate Agency helps brands rise above the noise with bold ideas and
+            smart strategies. We craft campaigns that inspire, engage, and drive
+            real results.
           </p>
         </div>
 
-        <div className="ml-auto flex w-[20%] justify-end pl-0 pr-0 py-12">
-          <div className="flex w-full flex-col items-end gap-3 text-right">
+        <div className="ml-0 flex w-full justify-start px-5 py-8 sm:ml-auto sm:w-[20%] sm:justify-end sm:px-0 sm:py-12">
+          <div className="flex w-full flex-col items-start gap-1 text-left sm:items-end sm:gap-3 sm:text-right">
             <Link
               href="/"
-              className={`${dmSans.className} text-[36px] text-[#7F7E2C] transition-colors hover:text-black`}
+              className={`${dmSans.className} text-2xl text-[#7F7E2C] transition-colors hover:text-black sm:text-[36px]`}
             >
               home
             </Link>
 
             <Link
               href="/about"
-              className={`${dmSans.className} text-[36px] text-[#7F7E2C] transition-colors hover:text-black`}
+              className={`${dmSans.className} text-2xl text-[#7F7E2C] transition-colors hover:text-black sm:text-[36px]`}
             >
               about
             </Link>
 
             <Link
               href="/services"
-              className={`${dmSans.className} text-[36px] text-[#7F7E2C] transition-colors hover:text-black`}
+              className={`${dmSans.className} text-2xl text-[#7F7E2C] transition-colors hover:text-black sm:text-[36px]`}
             >
               services
             </Link>
 
             <Link
               href="/portfolio"
-              className={`${dmSans.className} text-[36px] text-[#7F7E2C] transition-colors hover:text-black`}
+              className={`${dmSans.className} text-2xl text-[#7F7E2C] transition-colors hover:text-black sm:text-[36px]`}
             >
               portfolio
             </Link>
 
             <Link
               href="/contact"
-              className={`${dmSans.className} text-[36px] text-[#7F7E2C] transition-colors hover:text-black`}
+              className={`${dmSans.className} text-2xl text-[#7F7E2C] transition-colors hover:text-black sm:text-[36px]`}
             >
               contact
             </Link>
@@ -77,8 +75,10 @@ const Footer = () => {
       </div>
 
       <div className="border-t border-black/30">
-        <div className="mx-auto flex max-w-7xl items-end justify-between px-10 py-8">
-          <h2 className={`${cormorant.className} text-[256px] leading-[0.85]`}>
+        <div className="mx-auto flex max-w-7xl flex-col items-start justify-between gap-4 px-5 py-6 sm:flex-row sm:items-end sm:px-10 sm:py-8">
+          <h2
+            className={`${cormorant.className} text-[88px] leading-[0.85] sm:text-[256px]`}
+          >
             Elevate
           </h2>
 

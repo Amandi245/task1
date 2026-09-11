@@ -2,16 +2,11 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { Inter, Playfair_Display } from "next/font/google";
+import { Inter } from "next/font/google";
 
 const inter = Inter({
   subsets: ["latin"],
   weight: ["300", "400", "500"],
-});
-
-const playfair = Playfair_Display({
-  subsets: ["latin"],
-  weight: ["400", "500"],
 });
 
 export default function ServicesDetail() {
@@ -71,18 +66,18 @@ export default function ServicesDetail() {
       {serviceSections.map((service) => (
         <div
           key={service.id}
-          className={`relative w-full ${service.bgColor} ${service.textColor} overflow-hidden py-14 sm:py-16 md:py-20 px-6 sm:px-12 md:px-16 lg:px-20`}
+          className={`relative w-full ${service.bgColor} ${service.textColor} overflow-hidden py-4 sm:py-16 md:py-20 px-3 sm:px-12 md:px-16 lg:px-20`}
         >
           <div className="max-w-7xl mx-auto relative z-10">
             {/* Top Row: Title & Top Right Text */}
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start pb-8">
-              <div className="lg:col-span-8 pr-4">
-                <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-normal tracking-tight leading-tight">
+            <div className="grid grid-cols-12 gap-2 sm:gap-6 items-start pb-4 sm:pb-8">
+              <div className="col-span-8 lg:col-span-8 pr-0 sm:pr-4">
+                <h2 className="text-2xl sm:text-5xl md:text-6xl lg:text-7xl font-normal tracking-tight leading-tight">
                   {service.title}
                 </h2>
               </div>
-              <div className="lg:col-span-4 lg:pl-8">
-                <p className="text-xs sm:text-sm md:text-base leading-relaxed opacity-90 font-light max-w-xs">
+              <div className="col-span-4 lg:col-span-4 pl-0 lg:pl-8">
+                <p className="text-[9px] sm:text-sm md:text-base leading-tight sm:leading-relaxed opacity-90 font-light max-w-xs">
                   {service.description}
                 </p>
               </div>
@@ -90,26 +85,26 @@ export default function ServicesDetail() {
 
             {/* Divider Line */}
             <div
-              className={`w-full border-t ${service.borderColor} my-6 sm:my-8 lg:w-[70%]`}
+              className={`w-full border-t ${service.borderColor} my-3 sm:my-8 lg:w-[70%]`}
             />
 
             {/* Features list (2 Columns) */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-y-4 gap-x-12 lg:w-[70%] mb-10">
-              <div className="space-y-4">
+            <div className="grid grid-cols-2 gap-y-2 gap-x-5 sm:gap-y-4 sm:gap-x-12 lg:w-[70%] mb-5 sm:mb-10">
+              <div className="space-y-2 sm:space-y-4">
                 {service.col1.map((item, idx) => (
                   <p
                     key={idx}
-                    className="text-lg sm:text-xl md:text-2xl font-normal tracking-tight"
+                    className="text-[11px] sm:text-xl md:text-2xl font-normal tracking-tight leading-tight"
                   >
                     {item}
                   </p>
                 ))}
               </div>
-              <div className="space-y-4">
+              <div className="space-y-2 sm:space-y-4">
                 {service.col2.map((item, idx) => (
                   <p
                     key={idx}
-                    className="text-lg sm:text-xl md:text-2xl font-normal tracking-tight"
+                    className="text-[11px] sm:text-xl md:text-2xl font-normal tracking-tight leading-tight"
                   >
                     {item}
                   </p>
@@ -121,7 +116,7 @@ export default function ServicesDetail() {
             <div>
               <Link
                 href="/#work"
-                className="inline-block bg-white text-gray-900 px-5 py-2.5 rounded-sm text-sm font-normal shadow-sm hover:bg-gray-100 transition-colors"
+                className="inline-block bg-white text-gray-900 px-3 py-1.5 sm:px-5 sm:py-2.5 rounded-sm text-[9px] sm:text-sm font-normal shadow-sm hover:bg-gray-100 transition-colors"
               >
                 view case studies
               </Link>
@@ -129,7 +124,7 @@ export default function ServicesDetail() {
           </div>
 
           {/* Right Side Background Graphic Overlay (Design matching) */}
-          <div className="absolute -right-10 top-1/2 -translate-y-1/2 w-[515px] h-[515px] pointer-events-none opacity-90 z-0">
+          <div className="absolute -right-16 sm:-right-10 top-1/2 -translate-y-1/2 w-[180px] h-[180px] sm:w-[515px] sm:h-[515px] pointer-events-none opacity-90 z-0">
             <Image
               src={service.graphic}
               alt={service.title}

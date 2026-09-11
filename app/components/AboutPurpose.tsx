@@ -9,10 +9,10 @@ const editorial = Bodoni_Moda({
 export default function AboutPurpose() {
   return (
     <section
-      className="relative h-[300px] min-[601px]:h-[35.1vw]"
+      className="relative h-[430px] min-[601px]:h-[35.1vw]"
       aria-label="Our mission and vision"
     >
-      <div className="grid grid-cols-2 gap-6 bg-[linear-gradient(#f5f55b_0_48px,transparent_48px)] px-[22px] min-[601px]:gap-[10.3vw] min-[601px]:bg-[linear-gradient(#f5f55b_0_7.6vw,transparent_7.6vw)] min-[601px]:px-[3.45vw]">
+      <div className="grid grid-cols-1 gap-8 bg-[linear-gradient(#f5f55b_0_48px,transparent_48px)] px-[22px] min-[601px]:grid-cols-2 min-[601px]:gap-[10.3vw] min-[601px]:bg-[linear-gradient(#f5f55b_0_7.6vw,transparent_7.6vw)] min-[601px]:px-[3.45vw]">
         <article>
           <h2
             className={`${editorial.className} text-[34px] leading-[48px] min-[601px]:text-[5.5vw] min-[601px]:leading-[7.6vw]`}
