@@ -14,9 +14,10 @@ const cormorant = Cormorant_Garamond({
 
 const Footer = () => {
   return (
-    <footer className="bg-[#F5F360] text-black border-t border-black/30 pt-12 sm:pt-24 pb-0">
-      <div className="mx-auto flex max-w-7xl flex-col sm:flex-row">
-        <div className="w-full border-b border-black/30 px-5 py-8 sm:w-[80%] sm:border-b-0 sm:border-r sm:px-10 sm:py-12">
+    <footer className="bg-[#F5F360] text-black border-t border-black/30">
+      <div className="mx-auto flex max-w-7xl flex-col items-stretch sm:flex-row">
+        {/* Left Column */}
+        <div className="w-full border-b border-black/30 px-5 pt-10 pb-8 sm:w-[80%] sm:border-b-0 sm:border-r sm:border-black/30 sm:px-10 sm:pt-16 sm:pb-12">
           <Image
             src="/images/footer-logo.svg"
             alt="Logo"
@@ -34,7 +35,8 @@ const Footer = () => {
           </p>
         </div>
 
-        <div className="ml-0 flex w-full justify-start px-5 py-8 sm:ml-auto sm:w-[20%] sm:justify-end sm:px-0 sm:py-12">
+        {/* Right Column */}
+        <div className="flex w-full justify-start px-5 pt-10 pb-8 sm:ml-auto sm:w-[20%] sm:justify-end sm:px-10 sm:pt-16 sm:pb-12">
           <div className="flex w-full flex-col items-start gap-1 text-left sm:items-end sm:gap-3 sm:text-right">
             <Link
               href="/"
