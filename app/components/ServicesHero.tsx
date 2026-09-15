@@ -1,5 +1,5 @@
 "use client";
-
+import Navbar from "../components/Navbar";
 import Image from "next/image";
 import Link from "next/link";
 import { Playfair_Display, Inter } from "next/font/google";
@@ -104,53 +104,7 @@ export default function ServicesHero() {
         }}
       />
 
-      {/* Built-in Top Navbar */}
-      <header className="relative z-30 w-full max-w-7xl mx-auto px-4 py-4 sm:px-6 sm:py-6 flex items-center justify-between">
-        <Link href="/" className="flex items-center space-x-2.5">
-          <Image
-            src="/images/hero-gauge.svg"
-            alt="Elevate Logo"
-            width={24}
-            height={24}
-            className="w-4 h-4 sm:w-6 sm:h-6 object-contain"
-            priority
-          />
-          <span
-            className={`${playfair.className} text-sm sm:text-2xl font-normal text-gray-900 tracking-tight`}
-          >
-            Elevate
-          </span>
-        </Link>
-
-        <nav className="hidden sm:flex items-center space-x-6 sm:space-x-10 text-sm font-normal text-gray-900">
-          <Link href="/about" className="hover:opacity-60 transition-opacity">
-            about
-          </Link>
-          <Link
-            href="/services"
-            className="text-[#D5DB5C] font-medium hover:opacity-80 transition-opacity"
-          >
-            services
-          </Link>
-          <Link href="/work" className="hover:opacity-60 transition-opacity">
-            work
-          </Link>
-          <Link
-            href="/#contact"
-            className="hover:opacity-60 transition-opacity"
-          >
-            contact
-          </Link>
-        </nav>
-        <button
-          type="button"
-          aria-label="Open navigation menu"
-          className="flex sm:hidden h-6 w-6 flex-col items-center justify-center gap-1"
-        >
-          <span className="block h-px w-3 bg-gray-900" />
-          <span className="block h-px w-3 bg-gray-900" />
-        </button>
-      </header>
+      <Navbar variant="dark" />
 
       {/* Hero Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 pt-4 sm:px-6 sm:pt-2 text-center">

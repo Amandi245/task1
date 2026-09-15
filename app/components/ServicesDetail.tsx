@@ -116,7 +116,7 @@ export default function ServicesDetail() {
             <div>
               <Link
                 href="/#work"
-                className="inline-block bg-white text-gray-900 px-3 py-1.5 sm:px-5 sm:py-2.5 rounded-sm text-[9px] sm:text-sm font-normal shadow-sm hover:bg-gray-100 transition-colors"
+                className="inline-block bg-white text-gray-900 px-3 py-1.5 sm:px-5 sm:py-2.5 rounded-sm text-[9px] sm:text-sm font-normal"
               >
                 view case studies
               </Link>

@@ -12,12 +12,20 @@ const cormorant = Cormorant_Garamond({
   weight: ["500"],
 });
 
-const Footer = () => {
+const Footer = ({
+  showVerticalLine = false,
+}: {
+  showVerticalLine?: boolean;
+}) => {
   return (
-    <footer className="bg-[#F5F360] text-black border-t border-black/30">
+    <footer className="relative z-10 bg-[#F5F360] text-black">
       <div className="mx-auto flex max-w-7xl flex-col items-stretch sm:flex-row">
         {/* Left Column */}
-        <div className="w-full border-b border-black/30 px-5 pt-10 pb-8 sm:w-[80%] sm:border-b-0 sm:border-r sm:border-black/30 sm:px-10 sm:pt-16 sm:pb-12">
+        <div
+          className={`w-full border-b border-black/30 px-5 pt-10 pb-8 sm:w-[80%] sm:border-b-0 sm:px-10 sm:pt-16 sm:pb-12 ${
+            showVerticalLine ? "sm:border-r sm:border-black/30" : ""
+          }`}
+        >
           <Image
             src="/images/footer-logo.svg"
             alt="Logo"

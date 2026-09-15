@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import WorkHero from "../components/WorkHero";
 import WorkProjects from "../components/WorkProjects";
-import AboutFooter from "../components/AboutFooter";
+import Footer from "../components/Footer";
+import LetsTalkSection from "../components/LetsTalkSection";
 
 export const metadata: Metadata = {
   title: "Work | Elevate",
@@ -13,7 +14,8 @@ export default function WorkPage() {
     <main className="w-full min-h-screen bg-white">
       <WorkHero />
       <WorkProjects />
-      <AboutFooter />
+      <LetsTalkSection />
+      <Footer />
 
     </main>
   );

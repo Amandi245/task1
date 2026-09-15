@@ -3,7 +3,9 @@ import AboutStory from "../components/AboutStory";
 import AboutGlance from "../components/AboutGlance";
 import AboutPurpose from "../components/AboutPurpose";
 import AboutCrew from "../components/AboutCrew";
-import AboutFooter from "../components/AboutFooter"; // Footer වෙනුවට AboutFooter ලෙස වෙනස් විය
+import LetsTalkSection from "../components/LetsTalkSection";
+
+import Footer from "../components/Footer";
 
 export const metadata: Metadata = {
   title: "About | Elevate",
@@ -18,7 +20,8 @@ export default function AboutPage() {
       <AboutGlance />
       <AboutPurpose />
       <AboutCrew />
-      <AboutFooter />
+      <LetsTalkSection />
+      <Footer />
     </main>
   );
 }

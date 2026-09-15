@@ -2,112 +2,56 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
-import { useState } from "react";
-import { Cormorant_Garamond, DM_Sans } from "next/font/google";
+import { Cormorant_Garamond } from "next/font/google";
 
 const cormorant = Cormorant_Garamond({
   subsets: ["latin"],
-  weight: ["500", "600"],
+  weight: ["500", "600", "700"],
 });
 
-const dmSans = DM_Sans({
-  subsets: ["latin"],
-  weight: ["400", "500"],
-});
-
-const links = [
-  { href: "/about", label: "about" },
-  { href: "/services", label: "services" },
-  { href: "/work", label: "work" },
-  { href: "/#contact", label: "contact" },
-];
-
-const Navbar = () => {
-  const pathname = usePathname();
-  const isAbout = pathname === "/about";
-  const [menuOpen, setMenuOpen] = useState(false);
-
-  return (
-    <nav className="relative z-30 flex items-center justify-between px-6 py-6 md:px-12">
-      <Link
-        href="/"
-        aria-label="Elevate home"
-        className="flex items-center gap-3"
-      >
-        {isAbout ? (
-          <>
-            <Image
-              src="/images/hero-gauge.svg"
-              alt=""
-              width={36}
-              height={36}
-              className="h-8 w-8 md:h-9 md:w-9"
-              priority
-            />
-            <span
-              className={`${cormorant.className} text-[28px] font-medium leading-none text-white md:text-[32px]`}
-            >
-              Elevate
-            </span>
-          </>
-        ) : (
-          <Image
-            src="/images/logo2.png"
-            alt="Elevate"
-            width={180}
-            height={60}
-            priority
-            className="h-12 w-auto md:h-16"
-          />
-        )}
-      </Link>
-
-      <ul
-        className={`${dmSans.className} hidden gap-5 text-[12px] font-normal lowercase text-white md:flex md:gap-10 md:text-[13px]`}
-      >
-        {links.map((link) => {
-          const isActive = link.href === "/about" && pathname === "/about";
-
-          return (
-            <li key={link.href}>
-              <Link
-                href={link.href}
-                className={`duration-300 hover:text-[#F5F360] ${
-                  isActive ? "text-[#F5F360]" : ""
-                }`}
-              >
-                {link.label}
-              </Link>
-            </li>
-          );
-        })}
-      </ul>
-      <button
-        type="button"
-        aria-label="Toggle navigation menu"
-        aria-expanded={menuOpen}
-        onClick={() => setMenuOpen((open) => !open)}
-        className="flex h-8 w-8 flex-col items-center justify-center gap-1 md:hidden"
-      >
-        <span className="h-px w-4 bg-current" />
-        <span className="h-px w-4 bg-current" />
-      </button>
-      {menuOpen && (
-        <ul
-          className={`${dmSans.className} absolute right-6 top-16 flex flex-col gap-4 bg-black/90 px-5 py-4 text-sm lowercase text-white md:hidden`}
-        >
-          {links.map((link) => (
-            <li key={link.href}>
-              <Link href={link.href} onClick={() => setMenuOpen(false)}>
-                {link.label}
-              </Link>
-            </li>
-          ))}
-        </ul>
-      )}
-    </nav>
-  );
+type NavbarProps = {
+  variant?: "light" | "dark";
 };
 
-export default Navbar;
+export default function Navbar({ variant = "dark" }: NavbarProps) {
+  const textColor = variant === "light" ? "text-white" : "text-gray-900";
+
+  return (
+    <header className={`absolute top-0 left-0 z-50 w-full ${textColor}`}>
+      <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-5 sm:px-6">
+        {/* Logo */}
+        <Link href="/" className="flex items-center gap-2">
+          <Image
+            src="/images/hero-gauge.svg"
+            alt="Elevate Logo"
+            width={24}
+            height={24}
+          />
+
+          <span className={`${cormorant.className} text-2xl`}>Elevate</span>
+        </Link>
+
+        {/* Navigation */}
+        <nav className="hidden sm:flex items-center gap-8">
+          <Link href="/about">about</Link>
+
+          <Link href="/services">services</Link>
+
+          <Link href="/work">work</Link>
+
+          <Link href="/#contact">contact</Link>
+        </nav>
+
+        {/* Mobile Menu */}
+        <button
+          type="button"
+          className="flex sm:hidden flex-col gap-1"
+          aria-label="Open navigation menu"
+        >
+          <span className="h-px w-4 bg-current" />
+          <span className="h-px w-4 bg-current" />
+        </button>
+      </div>
+    </header>
+  );
+}

@@ -30,7 +30,7 @@ export default function AboutStory() {
     >
       {/* Reusable Navbar */}
       <div className="relative z-30">
-        <Navbar />
+        <Navbar variant="light" />
       </div>
 
       <div className="flex h-[340px] flex-col items-center pt-8 min-[601px]:h-[42.2vw] min-[601px]:pt-[4.1vw]">

@@ -14,12 +14,9 @@ export default function Home() {
       <AboutSection />
       <Services />
       <WorkSection />
-      <Testimonials/>
+      <Testimonials />
       <ContactSection />
-      <Footer />
+      <Footer showVerticalLine={true} />
     </>
-    
-       
-    
   );
 }

@@ -23,7 +23,7 @@ const HeroSection = () => {
 
       <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent"></div>
       <div className="relative z-30">
-        <Navbar />
+        <Navbar variant="light" />
       </div>
 
       <div className="absolute inset-0 flex flex-col items-center justify-end pb-16 sm:pb-30 z-20 px-4">
